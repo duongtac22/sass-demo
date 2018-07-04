@@ -26,6 +26,15 @@ module.exports = [
             }
           }
         ]
+      }, {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          publicPath: '/',
+          outputPath: 'public/',
+          objectAssign: 'Object.assign'
+        }
       }]
     }
   },
